@@ -1,0 +1,30 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@primevue/themes": "^4.0.4",
+    "@vuelidate/core": "^2.0.3",
+    "@vuelidate/validators": "^2.0.4",
+    "nuxt": "^3.12.4",
+    "nuxt-aos": "^1.2.5",
+    "primeicons": "^7.0.0",
+    "primevue": "^4.0.4",
+    "vue": "latest",
+    "vue-tel-input": "^9.1.4"
+  },
+  "devDependencies": {
+    "@primevue/nuxt-module": "^4.0.4",
+    "@types/vue-tel-input": "^2.1.7",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.41",
+    "tailwindcss": "^3.4.9"
+  }
+}

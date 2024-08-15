@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import 'primeicons/primeicons.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply text-base bg-white text-dark font-normal font-manrope transition-all duration-500 ease-in-out m-0 p-0;
+    }
+    html {
+        scroll-behavior: smooth;
+        /* font-size: 62.5%; */
+    }
+    *,
+    *::before,
+    *::after {
+        @apply m-0 p-0 box-border;
+    }
+
+    /* ::-webkit-scrollbar {
+        @apply w-4 h-4;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-[#344675] rounded-[100vh] border-solid border-4 border-darkBgSec;
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-darkBgSec;
+    } */
+}
+
+@layer components {
+    .p-inputtext{
+        transition: all 0.2s ease-in !important;
+        @apply ease-out py-4 px-4 border border-gray1 text-sm
+        text-black focus:border-dark placeholder:text-gray1
+        outline-none placeholder:text-[12px] !important;
+    }
+    .p-checkbox .p-component{
+        @apply bg-white !important;
+    }
+    .p-checkbox-input{
+        @apply bg-white !important;
+    }
+    .gray-btn > .p-button{
+        @apply bg-gray-200 text-md font-bold text-dark border w-full py-[13px] 
+        px-6 border-[#EDF1F3] !important;
+    }
+}
+
+@layer utilities {
+    .action-link {
+        @apply transition-all  text-md 
+         duration-200 ease-in-out
+        hover:text-info-darken-1 hover:underline;
+    }
+}
