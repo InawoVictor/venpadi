@@ -13,13 +13,17 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: [// 'primeicons/primeicons.css'
-    '@primevue/nuxt-module', 
+  modules: [
+    '@primevue/nuxt-module',
     "nuxt-aos",
+    "@pinia/nuxt",
+    "@nuxt/icon",
+    "@nuxtjs/google-fonts"
   ],
 
   plugins: [
     '~/plugins/vue-tel-input.ts',
+    '~/plugins/toast-service.ts',
   ],
 
   primevue: {
@@ -28,6 +32,14 @@ export default defineNuxtConfig({
             preset: Aura
         }
     }
+  },
+
+  googleFonts: {
+    families: {
+      Poppins: [300, 400, 500, 600, 700, 900],
+      // Inter: [300, 400, 500, 600, 700, 800, 900],
+      // "Work Sans": [300, 400, 500, 600, 700, 800, 900],
+    },
   },
 
   aos: {

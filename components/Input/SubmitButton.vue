@@ -1,5 +1,5 @@
 <template>
-    <Button 
+    <Button
         class="
             shadow-[0px_-3px_2px_0px_rgba(225,97,25,1)_inset]
             !bg-primary !text-white !py-[13px] 

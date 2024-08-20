@@ -9,14 +9,22 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
+  "overrides": {
+    "vue": "latest"
+  },
   "dependencies": {
+    "@nuxt/icon": "^1.4.5",
+    "@nuxtjs/google-fonts": "^3.2.0",
+    "@pinia/nuxt": "^0.5.3",
     "@primevue/themes": "^4.0.4",
     "@vuelidate/core": "^2.0.3",
     "@vuelidate/validators": "^2.0.4",
     "nuxt": "^3.12.4",
     "nuxt-aos": "^1.2.5",
+    "pinia": "^2.2.2",
     "primeicons": "^7.0.0",
     "primevue": "^4.0.4",
+    "tailwindcss-primeui": "^0.3.4",
     "vue": "latest",
     "vue-tel-input": "^9.1.4"
   },

@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 @import 'primeicons/primeicons.css';
 
 @tailwind base;
@@ -19,20 +18,26 @@
         @apply m-0 p-0 box-border;
     }
 
-    /* ::-webkit-scrollbar {
+    ::-webkit-scrollbar {
         @apply w-4 h-4;
     }
 
     ::-webkit-scrollbar-thumb {
-        @apply bg-[#344675] rounded-[100vh] border-solid border-4 border-darkBgSec;
+        @apply bg-gray-darken-1 rounded-[100vh] border-solid border-4 border-dark;
     }
 
     ::-webkit-scrollbar-track {
-        @apply bg-darkBgSec;
-    } */
+        @apply bg-dark;
+    }
 }
 
 @layer components {
+    /* .drawer > .p-drawer-mask .p-overlay-mask .p-overlay-mask-enter {
+        @apply !bg-red-500 !important;
+    } */
+    .p-drawer-mask {
+        background-color: red !important;
+    }
     .p-inputtext{
         transition: all 0.2s ease-in !important;
         @apply ease-out py-4 px-4 border border-gray1 text-sm
@@ -47,7 +52,18 @@
     }
     .gray-btn > .p-button{
         @apply bg-gray-200 text-md font-bold text-dark border w-full py-[13px] 
-        px-6 border-[#EDF1F3] !important;
+        px-6 border-[#EDF1F3] rounded-lg !important;
+    }
+    .primary-btn > .p-button{
+        @apply bg-primary shadow-[0px_-3px_2px_0px_rgba(225,97,25,1)_inset] 
+        rounded-lg text-md font-bold text-white border w-full !py-3 
+        px-6 border-primary !important;
+    }
+
+    .primary-btn2 {
+        @apply bg-primary 
+        rounded-lg text-md font-bold text-white border w-full py-2 
+        px-6 border-primary ;
     }
 }
 

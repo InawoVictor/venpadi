@@ -18,20 +18,22 @@ export default {
         dark: "#1A1C1E",
         gray1: "#DCE4E8",
         info: "#4D81E7",
-        "info-darken-1": "#3863C6",
-        "info-lighten-1": "#78A5F0",
         warning: "#ECAC31",
         error: "#C65468",
         success: "#12B3A8",
+        "gray-darken-1": "#6C7278",
+        "info-darken-1": "#3863C6",
+        "info-lighten-1": "#78A5F0",
       },
       fontFamily: {
         manrope: ["Manrope", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       }, 
       fontSize: {
         md: ['1rem', '1.5rem']
       }
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-primeui')],
 }
 

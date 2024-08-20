@@ -1,5 +1,5 @@
 <template>
-  <div class="lg:pl-8 lg:pt-2 py-6 px-[7%] flex flex-col text-black gap-y-12 sm:gap-y-20">
+  <div v-focustrap class="lg:pl-8 lg:pt-2 py-6 sm:px-[7%] px-[5%] flex flex-col text-black gap-y-12 sm:gap-y-20">
     <img src="/svg/action-logo.svg" class="h-[53px] w-[53px]" alt="Logo">
 
     <div class="">
@@ -26,10 +26,10 @@
             <div class="flex items-center justify-between">
                 <div class="flex items-center gap-x-2">
                     <Checkbox v-model="rememberMe" variant="outlined" :binary="true" />
-                    <label class="text-md font-semibold text-black">Remember me</label>
+                    <label class="sm:text-md text-sm font-semibold text-black">Remember me</label>
                 </div>
                 <NuxtLink to="/reset-password" 
-                        class="text-black action-link"
+                        class="sm:text-md text-sm text-black action-link"
                     >
                         Forgot password?
                     </NuxtLink>

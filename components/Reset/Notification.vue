@@ -1,5 +1,5 @@
 <template>
-    <div class="lg:pl-8 lg:pt-2 py-6 px-[7%] flex flex-col text-black gap-y-14 sm:gap-y-20">
+    <div class="lg:pl-8 lg:pt-2 py-6 sm:px-[7%] px-[5%] flex flex-col text-black gap-y-14 sm:gap-y-20">
         <img src="/svg/action-logo.svg" class="h-[53px] w-[53px]" alt="Logo">
 
         <div class="">

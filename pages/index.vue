@@ -1,8 +1,13 @@
 <template>
-  <div>Hello from index</div>
+  <div>Hello from 
+    
+    <button @click="dialog.showError('hello success')">show dialog</button>
+  </div>
 </template>
 
 <script setup lang="ts">
+const dialog = useDialogStore();
+
 </script>
 
 <style>
