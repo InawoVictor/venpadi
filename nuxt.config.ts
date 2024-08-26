@@ -34,7 +34,7 @@ export default defineNuxtConfig({
     autoImport: false,
     components: {
       include: '*',
-      exclude: ['Carousel']
+      exclude: ['Carousel', 'Editor', 'Chart']
     },
     options: {
       theme: {

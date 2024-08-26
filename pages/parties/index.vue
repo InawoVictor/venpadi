@@ -16,6 +16,7 @@
                 <div class="flex items-center gap-x-3">
                     <button 
                         v-ripple
+                        @click="visible = true"
                         class="btn bg-primary text-white border border-primary-darken-2
                         shadow-[0px_-3px_2px_0px_rgba(225,97,25,1)_inset] flex
                         items-center gap-x-2
@@ -65,6 +66,13 @@
                 />
             </div>
         </div>
+        <Dialog v-model:visible="visible" modal header="Add new customer" :style="{ width: '75%' }">
+            <main class="flex">
+                <div class="flex-1">Left</div>
+                <Divider layout="vertical" />
+                <div class="flex-1">Right</div>
+            </main>
+        </Dialog>
     </div>
 </template>
 
@@ -91,6 +99,7 @@ const cards = [
         cardIndex: 2,
     },
 ]
+const visible = ref(false)
 
 const headers: Header[] = [
   { text: "PLAYER", value: "player" },
