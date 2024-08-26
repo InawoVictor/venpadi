@@ -1,15 +1,11 @@
 <template>
-  <div>Hello from 
-    
-    <button @click="dialog.showError('hello success')">show dialog</button>
-  </div>
+    <div></div>
 </template>
 
 <script setup lang="ts">
-const dialog = useDialogStore();
-
+  const router = useRouter();
+onBeforeMount(() => {
+  // console.log("here");
+  router.push("/dashboard");
+});
 </script>
-
-<style>
-
-</style>

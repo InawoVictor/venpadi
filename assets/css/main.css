@@ -32,14 +32,45 @@
 }
 
 @layer components {
-    /* .drawer > .p-drawer-mask .p-overlay-mask .p-overlay-mask-enter {
-        @apply !bg-red-500 !important;
-    } */
-    .p-drawer-mask {
-        background-color: red !important;
+    /* Table Style */
+    .customize-table {
+        --easy-table-border: none;
+        --easy-table-row-border: none;
+        --easy-table-header-font-size: 14px;
+        --easy-table-header-height: 50px;
+        --easy-table-header-font-color: #ACB5BB;
+        --easy-table-header-background-color: #F2F5F7;
+
+        --easy-table-header-item-padding: 10px 15px;
+
+        --easy-table-body-row-font-color: #1A1C1E;
+        --easy-table-body-row-height: 50px;
+        --easy-table-body-row-font-size: 14px;
+
+        --easy-table-body-row-hover-background-color: #f2f2f2f2;
+
+        --easy-table-body-item-padding: 10px 15px;
+
+        --easy-table-footer-font-color: #111827;
+        --easy-table-footer-font-size: 14px;
+        --easy-table-footer-padding: 0px 10px;
+        --easy-table-footer-height: 50px;
+
+        --easy-table-rows-per-page-selector-width: 70px;
+        --easy-table-rows-per-page-selector-option-padding: 10px;
+        --easy-table-rows-per-page-selector-z-index: 1;
+
+        --easy-table-scrollbar-track-color: #2d3a4f;
+        --easy-table-scrollbar-color: #6C7278;
+        --easy-table-scrollbar-thumb-color: #6C7278;
+        --easy-table-scrollbar-corner-color: #6C7278;
+
+        --easy-table-loading-mask-background-color: #2d3a4f;
     }
+
     .p-inputtext{
         transition: all 0.2s ease-in !important;
+        background: white !important;
         @apply ease-out py-4 px-4 border border-gray1 text-sm
         text-black focus:border-dark placeholder:text-gray1
         outline-none placeholder:text-[12px] !important;
@@ -68,9 +99,18 @@
 }
 
 @layer utilities {
+    .section {
+        @apply px-4 py-8;
+    }
+
     .action-link {
         @apply transition-all  text-md 
          duration-200 ease-in-out
         hover:text-info-darken-1 hover:underline;
     }
+
+    .btn {
+        @apply py-[13px] px-2 rounded-[10px]
+    }
+
 }

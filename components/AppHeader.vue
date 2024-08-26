@@ -1,5 +1,6 @@
 <template>
     <div class="  
+        bg-white z-20
         sticky top-0 px-[3%]  flex items-center transition-all ease-out duration-300
         justify-between border-b border-b-gray1 h-[80px] "
         :class="drawer.isOpen ? 'ml-[232px]' : 'ml-0'"
@@ -66,7 +67,6 @@
 
 <script lang="ts" setup>
 const drawer = useDrawerStore();
-const emit = defineEmits(['show:sidebar']);
 const visible = ref(true);
 const menu = ref();
 const items = ref([
@@ -87,9 +87,6 @@ const items = ref([
 
 const handleDrawer = () => {
     drawer.toggleDrawer();
-//   emit("show:sidebar");
-//   visible.value = !visible.value;
-  // console.log('visible', visible.value)
 };
 
 const toggle = (event: Event) => {

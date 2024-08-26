@@ -1,6 +1,5 @@
 <template>
-    <Drawer v-model:visible="isOpen" :baseZIndex="-10" :modal="false" :showCloseIcon="false" class="!bg-dark !w-[232px]">
-        <template #container="{ closeCallback }">
+    <div :class="isOpen ? 'left-0' : '-left-[232px]'" class="bg-dark h-full transition-all ease-out duration-300 fixed top-0 w-[232px]">
             <div class="flex h-full flex-col">
                 <div class="flex justify-center w-full pb-10 pt-8">
                     <span class="font-bold font-poppins text-2xl text-white">Venpadi</span>
@@ -26,13 +25,14 @@
                                 </a>
                                 <ul class="list-none py-0 pl-4 pr-0 m-0 hidden overflow-y-hidden transition-all duration-[400ms] ease-in-out">
                                     <li v-for="(subItem, i) in item.subMenu" :key="i">
-                                        <a
+                                        <NuxtLink
+                                            :to="subItem.link"
                                             v-ripple
                                             class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple"
                                         >
                                             <img :src="subItem.icon" class="mr-2" alt="">
                                             <span class="font-medium">{{subItem.title}}</span>
-                                        </a>
+                                        </NuxtLink>
                                     </li>
                                 </ul>
                             </div>
@@ -57,8 +57,7 @@
                     </ul>
                 </div>
             </div>
-        </template>
-    </Drawer>
+    </div>
 </template>
 
 <script setup lang="ts">
@@ -67,12 +66,30 @@ const menuItems = [
     {
         title: 'Dashboard',
         icon: '/svg/dashboard.svg',
-        link: '/',
+        link: '/dashboard',
         hasSubMenu: false,
     },
     {
         title: 'Parties',
         icon: '/svg/people.svg',
+        link: '/',
+        hasSubMenu: true,
+        subMenu: [
+            {
+                title: 'Parties',
+                icon: '/svg/people.svg',
+                link: '/parties',
+            },
+            {
+                title: 'Parties',
+                icon: '/svg/people.svg',
+                link: '/',
+            },
+        ]
+    },
+    {
+        title: 'Products',
+        icon: '/svg/box.svg',
         link: '/',
         hasSubMenu: true,
         subMenu: [
@@ -106,24 +123,24 @@ const menuItems = [
             },
         ]
     },
-    {
-        title: 'Sales',
-        icon: '/svg/status-up.svg',
-        link: '/',
-        hasSubMenu: true,
-        subMenu: [
-            {
-                title: 'Parties',
-                icon: '/svg/parties.svg',
-                link: '/',
-            },
-            {
-                title: 'Parties',
-                icon: '/svg/parties.svg',
-                link: '/',
-            },
-        ]
-    },
+    // {
+    //     title: 'Sales',
+    //     icon: '/svg/status-up.svg',
+    //     link: '/',
+    //     hasSubMenu: true,
+    //     subMenu: [
+    //         {
+    //             title: 'Parties',
+    //             icon: '/svg/parties.svg',
+    //             link: '/',
+    //         },
+    //         {
+    //             title: 'Parties',
+    //             icon: '/svg/parties.svg',
+    //             link: '/',
+    //         },
+    //     ]
+    // },
 ]
 
 const isOpen = computed({

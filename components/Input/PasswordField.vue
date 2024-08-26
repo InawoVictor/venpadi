@@ -69,10 +69,6 @@ function handleInput(event: Event) {
 </script>
 
 <style>
-.p-inputtext{
-    background: white !important;
-}
-
 .stay-center{
     top: 50%;
     right: 15px;
